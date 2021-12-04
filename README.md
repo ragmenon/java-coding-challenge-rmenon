@@ -21,10 +21,13 @@ The exchange rates can be received from [2]. This is a public service provided b
 As we are using user story format to specify our requirements, here are the user stories to implement:
 
 - As a client, I want to get a list of all available currencies
+  - http://localhost:7071/api/availableCurrencies
 - As a client, I want to get all EUR-FX exchange rates at all available dates as a collection
+  - http://localhost:7071/api/exchange
 - As a client, I want to get the EUR-FX exchange rate at particular day
+  - http://localhost:7071/api/exchange/2021-11-28
 - As a client, I want to get a foreign exchange amount for a given currency converted to EUR on a particular day
-
+  - http://localhost:7071/api/exchange/HKD/2018-01-01
 If you think that your service would require storage, please use H2 for simplicity, even if this would not be your choice if 
 you would implement an endpoint for real clients. 
 
@@ -59,3 +62,5 @@ demo output.
 [1] https://start.spring.io/
 
 [2] https://www.bundesbank.de/dynamic/action/en/statistics/time-series-databases/time-series-databases/759784/759784?listId=www_s331_b01012_3
+
+[3] Used Open Source https://github.com/Formicka/exchangerate.host instead of [2]
